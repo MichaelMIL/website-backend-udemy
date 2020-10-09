@@ -13,7 +13,6 @@
       "./mixins"
     ]
   },
-
   "ACL": {
     "dataSource": "db",
     "public": false
@@ -38,6 +37,10 @@
     "public": true
   },
   "CustomAccessToken": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Post": {
     "dataSource": "db",
     "public": true
   }

@@ -20,10 +20,15 @@
       "model": "Profile",
       "foreignKey": ""
     },
-    "accessTokens":{
-      "type":"hasMany",
+    "accessTokens": {
+      "type": "hasMany",
       "model": "CustomAccessToken",
-      "foreignKey": "userID"
+      "foreignKey": "userId"
+    },
+    "Post": {
+      "type": "hasMany",
+      "model": "Post",
+      "foreignKey": ""
     }
   },
   "acls": [],
