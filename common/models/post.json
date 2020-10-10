@@ -31,8 +31,8 @@
       "model": "Profile",
       "foreignKey": "profileId"
     },
-    "Catagory":{
-      "type":"belongsTo",
+    "Catagory": {
+      "type": "belongsTo",
       "model": "Catagory",
       "foreignKey": "catagoryId"
     }
