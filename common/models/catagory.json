@@ -1,5 +1,5 @@
 {
-  "name": "Post",
+  "name": "Catagory",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -12,29 +12,15 @@
     "slug": {
       "type": "string"
     },
-    "content": {
-      "type": "string"
-    },
     "created_at": {
-      "type": "date"
+      "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "user": {
-      "type": "belongsTo",
-      "model": "user",
-      "foreignKey": "userId"
-    },
-    "Profile": {
-      "type": "belongsTo",
-      "model": "Profile",
-      "foreignKey": "profileId"
-    },
-    "Catagory":{
-      "type":"belongsTo",
-      "model": "Catagory",
-      "foreignKey": "catagoryId"
+    "Post":{
+      "type" : "hasMany",
+      "model": "Post"
     }
   },
   "acls": [
