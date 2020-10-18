@@ -15,12 +15,12 @@
   },
   "validations": [],
   "relations": {
-    "Post":{
+    "Post": {
       "type": "belongsTo",
       "model": "Post",
       "foreignKey": "postId"
     },
-    "user":{
+    "user": {
       "type": "belongsTo",
       "model": "user",
       "foreignKey": "userId"

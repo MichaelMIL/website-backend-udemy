@@ -35,6 +35,10 @@
       "type": "belongsTo",
       "model": "Catagory",
       "foreignKey": "catagoryId"
+    },
+    "PostImage": {
+      "type": "hasMany",
+      "model": "PostImage"
     }
   },
   "acls": [
