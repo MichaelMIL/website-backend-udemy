@@ -32,11 +32,16 @@
     "user": {
       "type": "belongsTo",
       "model": "user",
-      "foreignKiey": "userID"
+      "foreignKey": "userID"
     },
     "Post": {
       "type": "hasMany",
       "model": "Post",
+      "foreignKey": ""
+    },
+    "Comment":{
+      "type":"hasMany",
+      "model":"Comment",
       "foreignKey": ""
     }
   },

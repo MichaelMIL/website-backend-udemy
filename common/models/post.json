@@ -39,6 +39,11 @@
     "PostImage": {
       "type": "hasMany",
       "model": "PostImage"
+    },
+    "Comments":{
+      "type":"hasMany",
+      "model":"Comment",
+      "foreignKey":""
     }
   },
   "acls": [
