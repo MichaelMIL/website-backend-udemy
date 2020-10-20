@@ -1,49 +1,24 @@
 {
-  "name": "Post",
-  "base": "PersistedModel",
+  "name": "AdminUser",
+  "base": "user",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "title": {
+    "email": {
       "type": "string"
     },
-    "slug": {
+    "password": {
       "type": "string"
-    },
-    "content": {
-      "type": "string"
-    },
-    "created_at": {
-      "type": "date"
     }
   },
   "validations": [],
   "relations": {
-    "user": {
-      "type": "belongsTo",
-      "model": "user",
-      "foreignKey": "userId"
-    },
-    "Profile": {
-      "type": "belongsTo",
-      "model": "Profile",
-      "foreignKey": "profileId"
-    },
-    "Catagory": {
-      "type": "belongsTo",
-      "model": "Catagory",
-      "foreignKey": "catagoryId"
-    },
-    "PostImage": {
+    "accessTokens": {
       "type": "hasMany",
-      "model": "PostImage"
-    },
-    "Comments": {
-      "type": "hasMany",
-      "model": "Comment",
-      "foreignKey": ""
+      "model": "CustomAccessToken",
+      "foreignKey": "AdminUserId"
     }
   },
   "acls": [
@@ -63,6 +38,18 @@
       "accessType": "WRITE",
       "principalType": "ROLE",
       "principalId": "editor",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
       "permission": "ALLOW"
     }
   ],

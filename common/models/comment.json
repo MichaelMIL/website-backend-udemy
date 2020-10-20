@@ -15,14 +15,14 @@
   },
   "validations": [],
   "relations": {
-    "post":{
+    "post": {
       "type": "belongsTo",
       "model": "Post",
       "foreignKey": "postId"
     },
-    "Profile":{
-      "type":"belongsTo",
-      "model":"Profile",
+    "Profile": {
+      "type": "belongsTo",
+      "model": "Profile",
       "foreignKey": "profileId"
     }
   },

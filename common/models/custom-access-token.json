@@ -8,11 +8,17 @@
   "properties": {},
   "validations": [],
   "relations": {
+    "AdminUser":{
+      "type": "belongsTo",
+      "model": "AdminUser",
+      "foreignKey": "AdminUserId"
+    },
     "user": {
       "type": "belongsTo",
       "model": "user",
       "foreignKey": "userId"
     }
+
   },
   "acls": [],
   "methods": {}

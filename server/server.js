@@ -109,6 +109,3 @@ app.models.Role.find({where:{name: 'editor'}},(err,roles)=>{
     }
   }
 });
-//app.middleware('auth', loopback.token({
-//  model: app.models.customAccessToken
-//}));

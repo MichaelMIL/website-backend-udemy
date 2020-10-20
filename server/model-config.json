@@ -59,5 +59,9 @@
   "Comment": {
     "dataSource": "db",
     "public": true
+  },
+  "AdminUser": {
+    "dataSource": "db",
+    "public": true
   }
 }

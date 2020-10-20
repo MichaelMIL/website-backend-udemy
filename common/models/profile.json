@@ -39,9 +39,9 @@
       "model": "Post",
       "foreignKey": ""
     },
-    "Comment":{
-      "type":"hasMany",
-      "model":"Comment",
+    "Comment": {
+      "type": "hasMany",
+      "model": "Comment",
       "foreignKey": ""
     }
   },
