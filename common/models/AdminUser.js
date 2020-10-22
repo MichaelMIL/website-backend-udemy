@@ -1,10 +1,7 @@
 'use strict';
-// const loopback = require('loopback');
-// const { Role, Principal } = require('loopback');
+
 
 var app = require('../../server/server');
-
-//const app = module.exports = loopback();
 
 module.exports = function(AdminUser) {
     AdminUser.newAdmin = function(user_id){
