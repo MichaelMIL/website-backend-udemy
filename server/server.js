@@ -109,32 +109,3 @@ app.models.Role.find({where:{name: 'editor'}},(err,roles)=>{
     }
   }
 });
-
-
-app.models.AdminUser.find((err, result)=>{
-  if(result.length === 0){
-    const user = {
-      email: 'michael@g.com',
-      password: 'test',
-      username: 'mike'
-    };
-
-    app.models.AdminUser.create(user, (err,result)=>{
-      console.log("Tried to create user: ", err, result);
-      app.models.Role.find({where:{name: 'admin'}}, (err,role)=>{
-        app.models.RoleMapping.create({
-          principalType: app.models.RoleMapping.USER,
-          principalId: result.id,
-          roleId: role[0].id
-        },(err2, principal)=>{
-          console.log("created princepal", err2, principal);
-      })})
-    });
-  }
-
-});
-
-
-app.models.AdminUser.afterRemote('create', (ctx, user, next)=>{
-  console.log("new user is: ", user);
-});
