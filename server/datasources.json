@@ -3,10 +3,10 @@
     "host": "localhost",
     "port": 27017,
     "database": "mywebsite",
-    "password": "",
+    "password": "6744078",
     "name": "db",
     "connector": "mongodb",
-    "user": ""
+    "user": "michaelAdmin"
   },
   "myFile": {
     "name": "myFile",
