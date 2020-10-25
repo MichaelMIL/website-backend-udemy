@@ -1,0 +1,26 @@
+{
+    "apps": [
+        {
+            "name": "demoapi",
+            "script": "./server/server.js",
+            "instences": 1,
+            "exec_mode": "cluster",
+            "env":{
+                "NODE_ENV": "production",
+                "PORT": 8080
+            },
+            "node_args": "--max_old_space_size=2048"
+        },
+        {
+            "name": "demoapi",
+            "script": "./server/server.js",
+            "instences": 1,
+            "exec_mode": "cluster",
+            "env":{
+                "NODE_ENV": "production",
+                "PORT": 8081
+            },
+            "node_args": "--max_old_space_size=2048"
+        }
+    ]
+}
